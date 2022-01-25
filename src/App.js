@@ -1,10 +1,10 @@
 import './App.css';
-import Animal from './views/Animal';
+import Pokemon from './views/Pokemon';
 
 function App() {
   return (
     <div className="App">
-      <Animal />
+      <Pokemon />
     </div>
   );
 }

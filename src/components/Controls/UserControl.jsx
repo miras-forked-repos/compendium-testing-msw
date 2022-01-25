@@ -1,19 +1,20 @@
 import React from 'react';
 
-export default function UserControl({ number, setNumber, searchAnimal }) {
+export default function UserControl({ query, setQuery, setLoading }) {
   return (
     <div>
-      <select
-        className="number"
-        placeholder="Search for Animal"
-        value={number}
+      <input
+        className="search"
+        type="text"
+        placeholder="Search Pokemon"
+        value={query}
         onChange={(e) => {
-          setNumber(e.target.value);
+          setQuery(e.target.value);
         }}
-      >
-        <option>Choose # displayed animals</option>
-        <option value="1">1</option>
-      </select>
+      />
+      <button className="search-button" onClick={() => setLoading(true)}>
+        Search
+      </button>
     </div>
   );
 }
