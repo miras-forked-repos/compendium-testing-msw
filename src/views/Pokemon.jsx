@@ -8,7 +8,7 @@ export default function Pokemon() {
   const [poke, setPoke] = useState([]);
   const [query, setQuery] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [sort, setSort] = useState(false);
+  // const [sort, setSort] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
