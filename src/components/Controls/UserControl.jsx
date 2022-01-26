@@ -13,7 +13,7 @@ export default function UserControl({ query, setQuery }) {
       />
       <button
         className="search-button"
-        onChange={(e) => {
+        onClick={(e) => {
           setQuery(e.target.value);
         }}
       >
