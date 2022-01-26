@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { userEvent } from '@testing-library/user-event';
 import Pokemon from '../../views/Pokemon';
 
 test('pokemon should search by query', async () => {
