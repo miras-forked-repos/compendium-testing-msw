@@ -12,7 +12,7 @@ test('should render a list of pokemon', async () => {
   const textBox = screen.getByRole('textbox');
   // rendering search button
   const button = screen.getByRole('button', {
-    name: /search/i,
+    name: /go!/i,
   });
 
   expect(pokemons).toHaveLength(20);
