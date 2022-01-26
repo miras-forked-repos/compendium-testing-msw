@@ -19,31 +19,25 @@ export default function Pokemon() {
     fetchData();
   }, [query]);
 
+  // function filterPokemon() {
+  //   let filteredPokemon = poke.filter((item) => {
+  //     return item.name.toLowerCase().includes(query) && (item.pokemon === poke || poke === 'All');
+  //   });
+  //   if (sort === true) {
+  //     return filteredPokemon.sort((a, b) => {
+  //       return a.length > b.length ? 1 : -1;
+  //     });
+  //   } else {
+  //     return filteredPokemon;
+  //   }
+  // }
+
   if (loading) {
     return <h2>Loading</h2>;
   }
-
-  function filterPokemon() {
-    let filteredPokemon = poke.filter((item) => {
-      return item.name.toLowerCase().includes(query) && (item.pokemon === poke || poke === 'All');
-    });
-    if (sort === true) {
-      return filteredPokemon.sort((a, b) => {
-        return a.length > b.length ? 1 : -1;
-      });
-    } else {
-      return filteredPokemon;
-    }
-  }
-
   return (
     <div>
-      <UserControl
-        setLoading={setLoading}
-        query={query}
-        setQuery={setQuery}
-        filterPokemon={filterPokemon}
-      />
+      <UserControl setLoading={setLoading} query={query} setQuery={setQuery} />
       <PokeList poke={poke} />
     </div>
   );
