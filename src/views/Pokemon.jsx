@@ -23,6 +23,7 @@ export default function Pokemon() {
   }
   return (
     <div>
+      <h1>Pokedex</h1>
       <UserControl setLoading={setLoading} query={query} setQuery={setQuery} />
       <PokeList poke={poke} />
     </div>
